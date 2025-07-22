@@ -1,0 +1,41 @@
+
+/* In your CSS file */
+/* Hide scrollbar by default */
+.custom-scroll {
+  overflow-y: auto;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.custom-scroll::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar by default */
+  background: transparent;
+  transition: width 0.3s ease;
+}
+
+.custom-scroll:hover::-webkit-scrollbar {
+  width: 8px; /* Show scrollbar on hover */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* Light track background */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #22c55e, #15803d); /* Green shade gradient */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #16a34a, #166534); /* Darker gradient on hover */
+}
+
+/* Firefox */
+.custom-scroll {
+  scrollbar-width: none; /* Hide scrollbar by default */
+}
+
+.custom-scroll:hover {
+  scrollbar-width: thin; /* Show thin scrollbar on hover */
+  scrollbar-color: #22c55e #f1f1f1; /* Green thumb, light track */
+}

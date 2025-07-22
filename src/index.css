@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example Tailwind classes for glassmorphism */
+/* src/index.css */
+
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .gradient-border {
+    border-image: linear-gradient(to right, #22c55e, #3b82f6) 1;
+  }
+  .hover\:gradient-border:hover {
+    border-image: linear-gradient(to right, #3b82f6, #22c55e) 1;
+  }
+  .glow-shadow {
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+  }
+}
+
+
+@layer utilities {
+  .dark-theme {
+    background-color: #1a1a1a;
+  }
+  .card-bg {
+    background: #2d2d2d;
+    border-left: 4px solid #22c55e;
+    border-radius: 10px;
+  }
+  .counter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #22c55e;
+    transition: all 1.5s ease-out;
+  }
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+  }
+  .fade-in.visible {
+    opacity: 1;
+  }
+  .profile-img {
+    border: 4px solid #22c55e;
+    border-radius: 50%;
+  }
+  .verified-pulse {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #22c55e 0%, transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 1.5s infinite;
+  }
+  .verified-pulse .checkmark {
+    font-size: 1rem;
+    color: #22c55e;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+  }
+}
+
+@layer utilities {
+  .dark-theme {
+    background-color: #1a1a1a;
+  }
+  .card-bg {
+    background: #2d2d2d;
+    border-left: 4px solid #22c55e;
+    border-radius: 10px;
+  }
+  .counter {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #22c55e;
+    transition: all 1.5s ease-out;
+  }
+  .fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+  }
+  .fade-in.visible {
+    opacity: 1;
+  }
+}
+
+
+
+@layer utilities {
+  .dark-theme {
+    background-color: #1a1a1a;
+  }
+  .slide-fade {
+    transition: opacity 0.5s ease-in-out;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #94a3b8;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: #22c55e;
+  }
+  .send-animate {
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .confirmation {
+    animation: fadeIn 0.5s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+
+
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@layer utilities {
+  .backdrop-blur-md {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+/* Mobile: fade from bottom */
+/* Fading mask from all sides */
+.mask-all-edges {
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+.animate-cursor::after {
+  content: '_';
+  animation: blink 1s infinite;
+}
+
+/* In your CSS file */
+/* Hide scrollbar by default */
+.custom-scroll {
+  overflow-y: auto;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.custom-scroll::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar by default */
+  background: transparent;
+  transition: width 0.3s ease;
+}
+
+.custom-scroll:hover::-webkit-scrollbar {
+  width: 8px; /* Show scrollbar on hover */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; /* Light track background */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #22c55e, #15803d); /* Green shade gradient */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #16a34a, #166534); /* Darker gradient on hover */
+}
+
+/* Firefox */
+.custom-scroll {
+  scrollbar-width: none; /* Hide scrollbar by default */
+}
+
+.custom-scroll:hover {
+  scrollbar-width: thin; /* Show thin scrollbar on hover */
+  scrollbar-color: #22c55e #f1f1f1; /* Green thumb, light track */
+}
+
+
+
+@layer utilities {
+  .scrollbar-hide {
+    scrollbar-width: none;             /* Firefox */
+    -ms-overflow-style: none;          /* IE and Edge */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;                     /* Chrome, Safari, Opera */
+  }
+}
