@@ -1,5 +1,6 @@
 import { skills } from "../data/skills";
 import { motion } from "framer-motion";
+import React from 'react';
 
 // Import icon libraries
 import * as Fa from "react-icons/fa";

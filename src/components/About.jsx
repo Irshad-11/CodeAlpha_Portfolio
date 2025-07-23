@@ -5,6 +5,7 @@ import { AiFillProduct } from "react-icons/ai";
 import SkillRadarChart from "./SkillRadarChart";
 import { programmingSkills, softSkills , technicalSkills } from "../data/skillData";
 
+
 export default function About() {
   const [counters, setCounters] = useState({ years: 0, projects: 0, problems: 0, skills: 0 });
   const [showCharts, setShowCharts] = useState(false);

@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
+import React from 'react';
+
 
 const commands = [
   { cmd: "fetch profile --user irshad", reply: "Profile found: Irshad Hossain" },

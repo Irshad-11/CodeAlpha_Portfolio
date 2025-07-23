@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaFacebook, FaStar, FaLightbulb } from "react-icons/fa6";

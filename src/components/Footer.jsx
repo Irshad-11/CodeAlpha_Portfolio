@@ -1,5 +1,7 @@
 import { FaGithub, FaLinkedin, FaMapMarkerAlt, FaClock, FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import React from 'react';
+
 import { MdCopyright } from "react-icons/md";
 
 export default function Footer() {

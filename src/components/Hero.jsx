@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaFacebook, FaBars, FaTimes, FaDownload } from 'react-icons/fa';
 
