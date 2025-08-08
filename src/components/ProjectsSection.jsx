@@ -4,6 +4,8 @@ import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { GrCertificate } from "react-icons/gr";
+import { TiThSmall } from "react-icons/ti";
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -78,7 +80,7 @@ const ProjectsSection = () => {
 
       {/* === Featured Projects === */}
       <div className="mb-16">
-        <h3 className="text-2xl font-semibold mb-6 text-[#22c55e]">🚀 Featured Projects</h3>
+        <h3 className="text-2xl flex items-center gap-3 font-semibold mb-6 text-[#22c55e]"><GrCertificate/> Featured Projects</h3>
         <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {featured.map((project) => (
             <ProjectCard
@@ -93,7 +95,7 @@ const ProjectsSection = () => {
       {/* === All Projects === */}
       <div className="mb-10">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-2xl font-semibold text-[#22c55e]">📁 All Projects</h3>
+          <h3 className="text-2xl flex items-center gap-3 font-semibold text-[#22c55e]"><TiThSmall/> All Projects</h3>
           <div className="flex gap-2">
             <button
               onClick={scrollLeft}

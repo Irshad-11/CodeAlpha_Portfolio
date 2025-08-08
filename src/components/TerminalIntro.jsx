@@ -119,7 +119,7 @@ function TerminalIntro({ onFinish }) {
             >
               {Array.from({ length: currentIndex }).map((_, idx) => (
                 <div key={idx} className="mb-2">
-                  <div className="text-green-300">{`$-sys32> ${commands[idx].cmd}`}</div>
+                  <div className="text-green-300">{`$ sys32> ${commands[idx].cmd}`}</div>
                   <div className="text-white">{commands[idx].reply}</div>
                 </div>
               ))}
@@ -127,7 +127,7 @@ function TerminalIntro({ onFinish }) {
               {/* Typing Current */}
               <div>
                 <span className="text-green-300">
-                  $-sys32&gt; {typedCmd}
+                  $ sys32&gt; {typedCmd}
                   <span className="animate-pulse">█</span>
                 </span>
                 <div className="text-white">{typedReply}</div>

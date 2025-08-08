@@ -13,6 +13,7 @@ export default {
         heading: ["Poppins", "Montserrat", "sans-serif"],
         body: ["Inter", "Nunito Sans", "sans-serif"],
         dancing: ['Dancing Script', 'cursive'],
+        satisfy: ["Satisfy", "cursive"],
       },
       animation: {
         blink: 'blink 1s step-start infinite',

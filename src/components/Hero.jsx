@@ -7,12 +7,16 @@ const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const words = [
-    "Programmer",
-    "Web Developer and Designer",
-    "Personalized Web App",
-    "Works on SPA PWA",
-    "Figma, Git and 20+ skills"
-  ];
+  "Studying in SWE at UFTB",
+  "Learning React",
+  "Fond of SPA & PWA",
+  "Personal Software Solutions",
+  "Loved Web App rather Website",
+  "Using 5+ Frameworks & Libraries",
+  "Git, Figma, and 20+ Tools",
+  "Terminal is Ready. Ask anything..."
+];
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,13 +32,13 @@ const HeroSection = () => {
       {/* Top Header */}
       <div className="relative z-20 flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2">
           <img
-            src="https://img.icons8.com/?size=100&id=w5Zl82NTjDAU&format=png&color=000000"
+            src="https://raw.githubusercontent.com/Irshad-11/Documents/refs/heads/main/portfolio-logo-gif.gif"
             alt="Logo"
-            className="w-10 h-10 bg-white rounded-full p-1"
+            className="w-6 md:w-8"
           />
-          <h1 className="text-2xl sm:text-3xl font-bold font-mono text-white">SoftLab</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold font-satisfy text-white">SoftLab</h1>
         </div>
 
         {/* Desktop Nav */}
@@ -118,12 +122,11 @@ const HeroSection = () => {
           {/* Download CV Button */}
           <div className="mt-6">
             <motion.a
-              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/cv.pdf"
+              href="https://github.com/Irshad-11/Documents/raw/main/CV-%20Irshad%20Hossain%201st%20year.pdf"
               download
-              className="inline-flex items-center gap-2 
-               bg-[#22c55e] text-black 
+              className="inline-flex items-center gap-2 border-2 border-[#22c55e] text-[#22c55e]
+               hover:bg-[#22c55e] hover:text-black 
                px-4 py-2 md:px-6 md:py-3 
                rounded-full font-semibold 
                text-sm md:text-base 

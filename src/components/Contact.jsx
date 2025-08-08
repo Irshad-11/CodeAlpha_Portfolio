@@ -107,7 +107,7 @@ export default function ContactMe() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Your Message"
-                    className="w-full p-3 bg-[#2d2d2d]/80 border-l-4 border-[#22c55e] rounded text-white h-64"
+                    className="w-full p-3 resize-none bg-[#2d2d2d]/80 border-l-4 border-[#22c55e] rounded text-white h-64"
                   />
                   {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
 
@@ -199,7 +199,7 @@ export default function ContactMe() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                className="w-full p-3 bg-[#2d2d2d] border-l-4 border-[#22c55e] rounded text-white h-72"
+                className="w-full resize-none p-3 bg-[#2d2d2d] border-l-4 border-[#22c55e] rounded text-white h-72"
               />
               {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
               <button
